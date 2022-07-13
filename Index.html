@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Now</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script  src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/d027480c9c.js" crossorigin="anonymous" ></script> 
+    <script src="./shop.js" defer></script>
+</head>
+<body>
+
+    <header id="main-header">
+        
+   
+        <nav class="navbar navbar-expand-lg px-4">
+            <div class="nav-main-info d-lg-flex mx-lg-5">
+                <div class="nav-info align-items-center d-flex justify-content-between mx-lg-5">
+                    <span class="d-none d-md-block info-icon mx-lg-3">
+                        <i class="fas fa-phone"></i>
+                    </span>
+                    <p class="d-none d-md-block mb-0">Call : 25669668</p>
+                </div>
+                <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+                    <span class="cart-info-icon mx-2">
+                        <i class="fas fa-shopping-cart"></i>
+                    </span>
+                    <p class="d-none d-md-block text-capitalize mb-0">
+                        <span id="item-count">0</span> 
+                        items -Dt
+                        <span class="item-total">0.00</span>
+                    </p>
+                </div>
+
+            </div>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#main-navigation">
+                <span class="navbar-toggler-icon d-flex align-items-center justify-content-center">
+                    <i class="fas fa-bars"></i>
+                </span>
+            </button> 
+            <div class="collapse navbar-collapse" id="main-navigation">
+                <ul class="navbar-nav text-capitalize mx-auto">
+                    <li class="nav-item active" style="margin-right: 50px;">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                
+                    <li class="nav-item active" style="margin-right: 50px;">
+                        <a href="#products" class="nav-link">products</a>
+                    </li>
+                    <li class="nav-item active" style="margin-right: 50px;">
+                        <a href="#contact" class="nav-link">contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    
+        <div class="open-cart position-fixed" id="open-cart">
+
+        <div class="cart-total d-flex justify-content-around text-capitalize mt-5" >
+            <h5>total</h5>
+            <h5>Dt<strong id="cart-total" class="font-weight-bold">0.00</strong></h5>
+        </div>
+       <div class="d-flex justify-content-between mt-3 text-uppercase">
+           <a href="#" class="btn btn-black cart-item-btn">checkout</a>
+            <a href="" class="btn btn-red cart-item-btn">clear cart</a>
+        </div>
+    </div>
+
+    <section id="products">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 mx-auto col-xs-6 text-center">
+                    <br/><br/>
+                    <h2 class="text-capitalize"><strong>Our Products</strong></h2>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row product-items py-5" id="product-items">
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 product-item food-item" data-item="food-item">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="https://media.dior.com/couture/ecommerce/media/catalog/product/K/W/1610566799_M0446ILLO_M50P_E01_GHC.jpg?imwidth=800" class="card-img-top product-img">
+                            <span class="product-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 id="product-item-name">BAG</h5>
+                                <h5 class="product-item-value">D<strong id="store-item-price" class="font-weight-bold">7500</strong></h5>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 product-item food-item" data-item="food-item">
+                <div class="card single-item">
+                    <div class="img-container">
+                        <img src="https://media.dior.com/couture/ecommerce/media/catalog/product/u/O/1607514398_M0446CBAA_M41G_E01_GHC.jpg?imwidth=800" class="card-img-top product-img">
+                        <span class="product-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="product-item-name">BAG</h5>
+                            <h5 class="product-item-value">D<strong id="store-item-price" class="font-weight-bold">8000</strong></h5>
+                        </div>
+                    </div>
+                    
+                </div>
+                </div>
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 product-item food-item" data-item="food-item">
+                <div class="card single-item">
+                    <div class="img-container">
+                        <img src="https://media.dior.com/couture/ecommerce/media/catalog/product/y/O/1604925914_M0446SLLO_M989_E01_GH.jpg"  class="card-img-top product-img">
+                        <span class="product-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="product-item-name">BAG</h5>
+                            <h5 class="product-item-value">D<strong id="store-item-price" class="font-weight-bold">7000</strong></h5>
+                        </div>
+                    </div>
+                    
+                </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 footer-title py-5">
+                    <h1 class="text-capitalize banner-title text-center"><strong>Welcome !</strong></h1> <br/><br/>
+                    <div class="footer-icons mt-3 d-flex justify-content-center align-items-center flex-wrap flex-column">
+                        <a href="#" class="footer-icon p-2">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="footer-icon p-2">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="footer-icon p-2">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer-icon p-2">
+                            <i class="fab fa-snapchat"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 footer-contact text-center text-capitalize p-5">
+                    <form>
+                        <fieldset class="text-capitalize">
+                          <legend id="contact" >contact us</legend>
+                          <div class="form-group">
+                            <label for="input-email">Email address</label>
+                                <input type="email" class="form-control" id="input-email"  placeholder="Enter email">
+                                <p id="email-help" class="form-text">We'll never share your email with anyone else.</p>
+                          </div>                          
+                          <div class="form-group">
+                                <label for="input-text">your message</label>
+                                <textarea class="form-control" id="input-text" rows="5" placeholder="Enter your message"></textarea>
+                          </div>
+                          <button type="submit" class="btn btn-black">
+                              <span class="btn-font">Submit</span>
+                            </button>
+                        </fieldset>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
